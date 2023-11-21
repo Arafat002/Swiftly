@@ -1,0 +1,22 @@
+/* src/components/LoginPage.css */
+.login-page {
+  display: flex;
+  height: 100vh; /* Set the height of the container to 100% of the viewport height */
+}
+
+.image-half {
+  flex: 1; /* Take up half of the available space */
+  overflow: auto;
+}
+
+.image-half img {
+  width: 80%; /* Make the image fill the container width */
+  height: 80%; /* Make the image fill the container height */
+  object-fit: cover; /* Ensure the image covers the entire container */
+}
+
+.form-half {
+  flex: 1; /* Take up half of the available space */
+  padding: 20px; /* Add some padding for better appearance */
+  box-sizing: border-box; /* Include padding in the total width */
+}
