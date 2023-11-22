@@ -1,14 +1,32 @@
 // src/components/Login/Login.jsx
 import React, { useState } from "react";
+import axios from 'axios'
 import trackPaymentSvg from "../../assets/trackpayment.svg"; // Adjust the path based on your project structure
 import "./Login.css";
 const Login = () => {
-  const [username, setUsername] = useState("");
+  const [usermail, setUsermail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLogin = () => {
+  const handleLogin = async (e) => {
+    e.preventDefault()
     // Implement authentication logic here
-    console.log("Logging in with:", { username, password });
+    try{
+      
+      const responce = await axios.post('http://127.0.0.1:1234/v1/auth/login', {
+        loginName: usermail,
+        loginPassword: password
+      }) 
+      console.log(responce)
+      if(responce.data.status === "success"){
+        console.log("Logging in with:", { usermail, password });
+      }else{
+        console.log('errer')
+      }
+    }catch(err){
+      console.log(err)
+    }
+
+    
   };
 
   return (
@@ -25,8 +43,8 @@ const Login = () => {
             Email Address:
             <input
               type="text"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
+              value={usermail}
+              onChange={(e) => setUsermail(e.target.value)}
             />
           </label>
           <br />
@@ -49,7 +67,7 @@ const Login = () => {
             </div>
           </div>
           <br />
-          <button type="button" onClick={handleLogin}>
+          <button type="button" onClick={(e)=>{handleLogin(e)}}>
             Login
           </button>
           <p>
