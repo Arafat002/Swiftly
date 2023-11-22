@@ -1,12 +1,16 @@
 // src/index.js
 import React from "react";
 import ReactDOM from "react-dom";
+import {BrowserRouter} from 'react-router-dom'
 import "./App.css";
-import Login from "./components/Login/Login"; // Import your Login component
-import Register from "./components/Register/Register";
+import Root from "./Root";
+
 ReactDOM.render(
   <React.StrictMode>
-    <Login />
+    <BrowserRouter>
+      <Root />
+    </BrowserRouter>
+
   </React.StrictMode>,
   document.getElementById("root")
 );

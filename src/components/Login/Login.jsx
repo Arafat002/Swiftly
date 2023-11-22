@@ -15,7 +15,7 @@ const Login = () => {
 
     try{
       const responce = await axios.post('http://127.0.0.1:1234/v1/auth/login', {
-        loginName: usermail,
+        loginMail: usermail,
         loginPassword: password
       }) 
       console.log(responce)
