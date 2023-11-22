@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import CountryInfo from "./country";
 import AccountInfo from "./details";
+import "./Register.css";
 
 const RegistrationPage = () => {
   const [page, setPage] = useState(1); // 1 for PersonalInfo, 2 for AccountInfo
@@ -15,7 +16,7 @@ const RegistrationPage = () => {
   };
 
   return (
-    <div>
+    <div className="switch">
       <div>
         <button onClick={handlePrev} disabled={page === 1}>
           Country Information

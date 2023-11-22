@@ -1,22 +1,85 @@
 /* src/components/LoginPage.css */
 .login-page {
   display: flex;
-  height: 100vh; /* Set the height of the container to 100% of the viewport height */
+  height: 100vh;
+  /* Set the height of the container to 100% of the viewport height */
 }
-
 .image-half {
   flex: 1; /* Take up half of the available space */
   overflow: auto;
+  background: #e3def7;
 }
 
 .image-half img {
-  width: 80%; /* Make the image fill the container width */
-  height: 80%; /* Make the image fill the container height */
+  width: 372px; /* Make the image fill the container width */
+  height: 420px; /* Make the image fill the container height */
+  margin-left: 6rem;
+  margin-top: 6rem;
+  margin-bottom: 2rem;
   object-fit: cover; /* Ensure the image covers the entire container */
 }
+.img-p {
+  text-align: center;
+  font-size: 23px;
+  font-weight: 400;
+}
+.logintext {
+  font-size: 25px;
+  padding-bottom: 3rem;
+}
+.form-content {
+  width: 550px;
+  height: 50px;
+  margin-bottom: 2rem;
+}
 
+.form-content::placeholder {
+  padding-left: 1rem;
+}
+.form-label {
+  font-weight: bold;
+  font-size: 18px;
+}
 .form-half {
   flex: 1; /* Take up half of the available space */
   padding: 20px; /* Add some padding for better appearance */
-  box-sizing: border-box; /* Include padding in the total width */
+  box-sizing: border-box;
+  margin-top: 8rem;
+  margin-left: 6rem;
+  text-align: left;
+  /* Include padding in the total width */
+}
+
+.login-button {
+  width: 550px;
+  height: 50px;
+  background: #330ba6;
+  color: #eee;
+  border-radius: 3px;
+  margin-top: 2rem;
+}
+.remindme-label {
+  padding-left: 8px;
+}
+.form-options {
+  display: flex;
+  justify-content: space-between;
+}
+.form-options a {
+  margin-left: 7.5rem;
+  text-decoration: none;
+  color: black; /* Push "Forgot Password?" to the right */
+}
+
+.form-options div {
+  flex: 1; /* Make each div take equal width */
+}
+
+.no-account {
+  margin-left: 8rem;
+  padding-top: 1rem;
+}
+
+.no-account a {
+  text-decoration: none;
 }

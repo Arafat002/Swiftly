@@ -1,0 +1,119 @@
+.switch {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.Logo {
+  margin-right: 70rem;
+}
+.country-container {
+  width: 500px;
+  text-align: center;
+  margin-left: 30rem;
+}
+.country-header {
+  margin-top: -80px;
+  font-size: 25px;
+  margin-left: 2px;
+}
+
+.country-pg {
+  margin-top: 2rem;
+  font-size: 19px;
+  padding-left: 1.5rem;
+}
+
+.country-select {
+  margin-top: 3rem;
+  text-align: left;
+  margin-left: 1.75rem;
+}
+.country-label {
+  margin-top: 1.5rem;
+  width: 500px;
+  height: 50px;
+  padding-left: 10px;
+}
+
+.account-type {
+  margin-top: 2.5rem;
+}
+
+.continue-btn {
+  color: #eee;
+  border-radius: 2px;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  width: 500px;
+  height: 50px;
+  background: #330ba6;
+}
+
+.acc-pg {
+  margin-top: 1.5rem;
+}
+.acc-pg a {
+  text-decoration: none;
+  color: #330ba6;
+}
+
+/*Accountinfo styles*/
+.details {
+  text-align: left;
+  margin-top: 3rem;
+  margin-left: 35rem;
+  width: 550px;
+}
+
+.details-header {
+  font-size: 25px;
+}
+
+.details-pg {
+  margin-top: 1rem;
+  font-size: 19px;
+}
+
+.details-form {
+  margin-top: 2rem;
+}
+
+.form-input {
+  margin-top: 1rem;
+  width: 500px;
+  height: 50px;
+  margin-bottom: 1rem;
+}
+
+.form-input::placeholder {
+  padding-left: 1rem;
+}
+
+.bus-select,
+.cac {
+  margin-top: 1rem;
+  width: 500px;
+  height: 50px;
+  padding-left: 5px;
+  color: #1f1f1f;
+}
+
+.create-btn {
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  color: #eee;
+  background-color: #330ba6;
+  border: 5px;
+  width: 500px;
+  height: 50px;
+  font-size: 18px;
+}
+
+.details-agree {
+  padding-left: 8px;
+}
+
+.details-agree a {
+  text-decoration: none;
+  color: #330ba6;
+}

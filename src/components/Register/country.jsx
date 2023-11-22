@@ -2,6 +2,7 @@
 import React from "react";
 import { useState } from "react";
 import LogoSvg from "../../assets/logo.svg";
+import "./Register.css";
 
 const CountryInfo = ({ onNext }) => {
   const [selectedCountry, setSelectedCountry] = useState("");
@@ -16,17 +17,20 @@ const CountryInfo = ({ onNext }) => {
   };
   return (
     <div>
-      <img src={LogoSvg} alt="" />
-      <div>
-        <h2>
+      <img className="Logo" src={LogoSvg} alt="" />
+      <div className="country-container">
+        <h2 className="country-header">
           Swiftly provides solutions to only business owners at the moment
         </h2>
-        <p>select your country and click on business account to continue.</p>
-        <div>
+        <p className="country-pg">
+          select your country and click on business account to continue.
+        </p>
+        <div className="country-select">
           <div>
             <label htmlFor="country">Country</label>
             <br />
             <select
+              className="country-label"
               id="country"
               value={selectedCountry}
               onChange={handleCountryChange}
@@ -41,8 +45,10 @@ const CountryInfo = ({ onNext }) => {
           <div>
             <div>Select account</div>
 
-            <div>
+            <div className="acc-type">
+              <label htmlFor="business">Business Account</label>
               <input
+                className="account-type"
                 type="radio"
                 id="business"
                 name="accountType"
@@ -50,12 +56,11 @@ const CountryInfo = ({ onNext }) => {
                 checked={selectedAccountType === "business"}
                 onChange={handleAccountTypeChange}
               />
-              <label htmlFor="business">Business Account</label>
             </div>
           </div>
         </div>
-        <button>Continue</button>
-        <p>
+        <button className="continue-btn">Continue</button>
+        <p className="acc-pg">
           Already have an account? <a href="">Login here</a>
         </p>
       </div>
