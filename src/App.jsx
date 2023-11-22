@@ -6,7 +6,7 @@ import Login from "./components/Login/Login"; // Import your Login component
 import Register from "./components/Register/Register";
 ReactDOM.render(
   <React.StrictMode>
-    <Login />
+    <Register />
   </React.StrictMode>,
   document.getElementById("root")
 );
