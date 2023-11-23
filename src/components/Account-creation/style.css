@@ -17,6 +17,10 @@
 .verified-pg {
   color: #b9b6b6;
 }
+.verified-pg1 {
+  font-weight: bold;
+  margin-top: 8px;
+}
 .continue-button {
   width: 500px;
   height: 50px;

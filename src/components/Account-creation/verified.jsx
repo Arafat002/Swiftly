@@ -9,7 +9,10 @@ const Verified = () => {
       <p className="verified-pg">
         You've created a business account with swiftly
       </p>
-      <button className="continue-button">Continue</button>
+      <p className="verified-pg1">
+        To generate your business account number click here
+      </p>
+      <button className="continue-button">Remind me later</button>
     </div>
   );
 };
