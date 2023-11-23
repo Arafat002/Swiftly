@@ -3,10 +3,17 @@ import React, { useState } from "react";
 import axios from "axios";
 import trackPaymentSvg from "../../assets/trackpayment.svg"; // Adjust the path based on your project structure
 import "./Login.css";
+import ForgotPasswordModal from "../forgot-password";
 const Login = () => {
   const [usermail, setUsermail] = useState("");
   const [password, setPassword] = useState("");
-
+  const [showModal, setShowModal] = useState(false);
+  const handleForgotPasswordClick = () => {
+    setShowModal(true);
+  };
+  const closeModal = () => {
+    setShowModal(false);
+  };
   const handleLogin = async (e) => {
     e.preventDefault();
     // Implement authentication logic here
@@ -29,7 +36,6 @@ const Login = () => {
   return (
     <div className="login-page">
       <div className="image-half">
-        {/* Use the imported SVG image */}
         <img src={trackPaymentSvg} alt="Track Payment" />
         <p className="img-p">Simplifying business payments efficiently</p>
       </div>
@@ -72,7 +78,9 @@ const Login = () => {
               </label>
             </div>
             <div>
-              <a href="/forgot-password">Forgot Password?</a>
+              <a href="#" onClick={handleForgotPasswordClick}>
+                Forgot Password?
+              </a>
             </div>
           </div>
           <br />
@@ -90,6 +98,7 @@ const Login = () => {
           </p>
         </form>
       </div>
+      {showModal && <ForgotPasswordModal onClose={closeModal} />}
     </div>
   );
 };
