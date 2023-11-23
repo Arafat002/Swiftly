@@ -9,6 +9,7 @@
   flex: 1; /* Take up half of the available space */
   overflow: auto;
   background: #e3def7;
+  width: 550px;
 }
 
 .image-half img {
@@ -50,7 +51,7 @@
   flex: 1; /* Take up half of the available space */
   padding: 20px; /* Add some padding for better appearance */
   box-sizing: border-box;
-  margin-top: 8rem;
+  margin-top: 6rem;
   margin-left: 6rem;
   text-align: left;
   /* Include padding in the total width */
