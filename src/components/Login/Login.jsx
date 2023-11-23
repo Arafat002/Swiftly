@@ -5,7 +5,7 @@ import trackPaymentSvg from "../../assets/trackpayment.svg"; // Adjust the path 
 import "./Login.css";
 import { Link } from "react-router-dom";
 
-import ForgotPasswordModal from "../forgot-password";
+import ForgotPasswordSupportModal from "../forgot-password-modal";
 const Login = () => {
   const [usermail, setUsermail] = useState("");
   const [password, setPassword] = useState("");
@@ -105,7 +105,7 @@ const Login = () => {
           </p>
         </form>
       </div>
-      {showModal && <ForgotPasswordModal onClose={closeModal} />}
+      {showModal && <ForgotPasswordSupportModal onClose={closeModal} />}
     </div>
   );
 };
