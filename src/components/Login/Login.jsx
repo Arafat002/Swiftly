@@ -14,19 +14,24 @@ const Login = () => {
   const closeModal = () => {
     setShowModal(false);
   };
-  const handleLogin = async (e) => {
-    e.preventDefault();
+  const handleLogin = async () => {
+    //
+    // Don't forget to install to install axios
     // Implement authentication logic here
+    //
+
     try {
       const responce = await axios.post("http://127.0.0.1:1234/v1/auth/login", {
-        loginName: usermail,
+        loginMail: usermail,
         loginPassword: password,
       });
       console.log(responce);
       if (responce.data.status === "success") {
+        // Redirect to dashboard here
         console.log("Logging in with:", { usermail, password });
       } else {
-        console.log("errer");
+        // Throw error
+        console.log("error");
       }
     } catch (err) {
       console.log(err);
