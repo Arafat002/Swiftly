@@ -3,6 +3,7 @@ import React from "react";
 import { useState } from "react";
 import LogoSvg from "../../assets/logo.svg";
 import "./Register.css";
+import { Link } from "react-router-dom";
 
 const CountryInfo = ({ onNext }) => {
   const [selectedCountry, setSelectedCountry] = useState("");
@@ -61,7 +62,7 @@ const CountryInfo = ({ onNext }) => {
         </div>
         <button className="continue-btn">Continue</button>
         <p className="acc-pg">
-          Already have an account? <a href="">Login here</a>
+          Already have an account? <Link to="/login">Login here</Link>
         </p>
       </div>
     </div>

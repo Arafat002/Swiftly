@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import trackPaymentSvg from "../../assets/trackpayment.svg"; // Adjust the path based on your project structure
 import "./Login.css";
+import { Link } from "react-router-dom";
+
 const Login = () => {
   const [usermail, setUsermail] = useState("");
   const [password, setPassword] = useState("");
@@ -91,7 +93,7 @@ const Login = () => {
             Login
           </button>
           <p className="no-account">
-            Don't have an account? <a href="">create account</a>
+            Don't have an account? <Link to="/register">create account</Link>
           </p>
         </form>
       </div>
