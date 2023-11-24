@@ -1,7 +1,7 @@
 // src/components/RegistrationPage/PersonalInfo.js
 import React from "react";
 import { useState } from "react";
-import LogoSvg from "../../assets/logo.svg";
+import LogoSvg from "../../assets/swiftly.svg";
 import "./Register.css";
 import { Link } from "react-router-dom";
 

@@ -18,7 +18,7 @@ const RegistrationPage = () => {
 
   return (
     <div className="switch">
-      <div>
+      <div className="switch2">
         <button onClick={handlePrev} disabled={page === 1}>
           {page === 1
             ? "Country Information"

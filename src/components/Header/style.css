@@ -1,0 +1,25 @@
+.header-bar {
+  margin-top: 3rem;
+  margin-right: 5rem;
+}
+
+.account-profile {
+  margin-left: 80rem;
+  margin-top: -80px;
+}
+
+h2 {
+  margin-left: 20rem;
+  margin-bottom: -30px;
+}
+
+.search-bar {
+  margin-left: 50rem;
+}
+
+input {
+  background-color: #d9d9d9;
+  width: 250px;
+  height: 40px;
+  border-radius: 25px;
+}
