@@ -1,6 +1,6 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
-const Verification = () => {
+const Verification = ({ setCurrentLocation }) => {
   const [otp, setOtp] = useState(["", "", "", "", ""]); // Array to store OTP digits
   const inputRefs = useRef([
     React.createRef(),
@@ -23,6 +23,9 @@ const Verification = () => {
       inputRefs.current[index - 1].current.focus();
     }
   };
+  useEffect(() => {
+    setCurrentLocation(3);
+  });
   return (
     <div className="verify-container">
       <h2 className="verify-header">We just sent you an email </h2>

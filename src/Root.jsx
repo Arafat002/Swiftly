@@ -10,7 +10,7 @@ function Root() {
         <Route path="/login" element={<Login />} />
       </Routes>
       <Routes>
-        <Route path="/register" element={<Register />} />
+        <Route path="/register/*" element={<Register />} />
       </Routes>
     </div>
   );

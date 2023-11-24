@@ -1,11 +1,11 @@
 // src/components/RegistrationPage/PersonalInfo.js
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import LogoSvg from "../../assets/logo.svg";
 import "./Register.css";
 import { Link } from "react-router-dom";
 
-const CountryInfo = ({ onNext }) => {
+const CountryInfo = ({ onNext, setCurrentLocation }) => {
   const [selectedCountry, setSelectedCountry] = useState("");
 
   const handleCountryChange = (event) => {
@@ -16,6 +16,9 @@ const CountryInfo = ({ onNext }) => {
   const handleAccountTypeChange = (event) => {
     setSelectedAccountType(event.target.value);
   };
+  useEffect(() => {
+    setCurrentLocation(1);
+  }, []);
   return (
     <div>
       <img className="Logo" src={LogoSvg} alt="" />
@@ -60,7 +63,9 @@ const CountryInfo = ({ onNext }) => {
             </div>
           </div>
         </div>
-        <button className="continue-btn">Continue</button>
+        <button className="continue-btn">
+          <Link to={"../user-details"}>Continue</Link>
+        </button>
         <p className="acc-pg">
           Already have an account? <Link to="/login">Login here</Link>
         </p>

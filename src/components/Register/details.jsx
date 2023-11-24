@@ -1,8 +1,9 @@
 // src/components/RegistrationPage/AccountInfo.js
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./Register.css";
-const AccountInfo = ({ onPrev }) => {
+const AccountInfo = ({ onPrev, setCurrentLocation }) => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -23,6 +24,9 @@ const AccountInfo = ({ onPrev }) => {
     event.preventDefault();
     console.log("Form data submitted:", formData);
   };
+  useEffect(() => {
+    setCurrentLocation(2);
+  });
 
   return (
     <div className="details">
@@ -128,7 +132,7 @@ const AccountInfo = ({ onPrev }) => {
         </div>
 
         <button className="create-btn" type="submit">
-          Create Account
+          <Link to={"../otp-verification"}>Create Account</Link>
         </button>
       </form>
     </div>
