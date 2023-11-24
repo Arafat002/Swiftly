@@ -18,13 +18,13 @@ const Root = styled.div`
   height: 50px;
   display: grid;
   place-content: center;
-  margin-bottom: 50px;
+  margin: 20px 0px 60px 0px;
   .active {
-    background-color: blue;
+    background-color: #330ba6;
   }
 `;
 const Holder = styled.div`
-  width: 800px;
+  width: 600px;
   height: 10px;
   display: flex;
   justify-content: space-evenly;
@@ -33,10 +33,9 @@ const Holder = styled.div`
 `;
 const Box = styled.div`
   position: relative;
-  height: 4px;
+  height: 5px;
   width: 33%;
-  border-radius: 20px;
-  background-color: grey;
+  background-color: #ececec;
 `;
 
 export default ProgressHeader;

@@ -1,5 +1,5 @@
 // src/components/RegistrationPage/RegistrationPage.js
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import CountryInfo from "./country";
 import AccountInfo from "./details";
@@ -8,7 +8,38 @@ import ProgressHeader from "./ProgressHeader";
 import "./Register.css";
 
 const RegistrationPage = () => {
-  const [currentLocation, setCurrentLocation] = useState(3);
+  const [currentLocation, setCurrentLocation] = useState(0);
+
+  const [registerationDetails, setRegisterationDetails] = useState({
+    country: "",
+    businessType: "",
+    firstName: "",
+    lastName: "",
+    email: "",
+    businessRegType: "",
+    CAC: "",
+    password: "",
+  });
+
+  // Functions to get user details
+
+  const addCountry = (country, businessType) => {
+    setRegisterationDetails({ ...registerationDetails, country, businessType });
+  };
+  const addOtherDetails = (firstName, lastName, email, password) => {
+    setRegisterationDetails({
+      ...registerationDetails,
+      firstName,
+      lastName,
+      email,
+      password,
+    });
+  };
+
+  useEffect(() => {
+    console.log(registerationDetails);
+  }, [registerationDetails]);
+
   return (
     <>
       <ProgressHeader currentLocation={currentLocation} />
@@ -16,13 +47,23 @@ const RegistrationPage = () => {
       <Routes>
         <Route
           path="/country"
-          element={<CountryInfo setCurrentLocation={setCurrentLocation} />}
+          element={
+            <CountryInfo
+              setCurrentLocation={setCurrentLocation}
+              addCountry={addCountry}
+            />
+          }
         />
       </Routes>
       <Routes>
         <Route
           path="/user-details"
-          element={<AccountInfo setCurrentLocation={setCurrentLocation} />}
+          element={
+            <AccountInfo
+              setCurrentLocation={setCurrentLocation}
+              addOtherDetails={addOtherDetails}
+            />
+          }
         />
       </Routes>
       <Routes>
