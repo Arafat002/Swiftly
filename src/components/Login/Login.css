@@ -1,60 +1,42 @@
-/* src/components/LoginPage.css */
+/* Default styles for larger screens */
 .login-page {
   display: flex;
   height: 100vh;
   background-color: white;
-  /* Set the height of the container to 100% of the viewport height */
 }
+
 .image-half {
-  flex: 1; /* Take up half of the available space */
+  flex: 1;
   overflow: auto;
   background: #e3def7;
   width: 550px;
 }
 
 .image-half img {
-  width: 372px; /* Make the image fill the container width */
-  height: 420px; /* Make the image fill the container height */
+  width: 372px;
+  height: 420px;
   margin-left: 6rem;
   margin-top: 6rem;
   margin-bottom: 2rem;
-  object-fit: cover; /* Ensure the image covers the entire container */
-}
-.img-p {
-  text-align: center;
-  font-size: 23px;
-  font-weight: 400;
-}
-.logintext {
-  font-size: 25px;
-  padding-bottom: 3rem;
-}
-.form-content {
-  width: 550px;
-  height: 50px;
-  margin-bottom: 2rem;
-  border: solid 1px rgb(180, 180, 180);
-  border-radius: 5px;
-  background-color: white;
-  outline: none;
-  padding-left: 15px;
+  object-fit: cover;
 }
 
-.form-content::placeholder {
-  padding-left: 1rem;
-}
-.form-label {
-  font-weight: bold;
-  font-size: 18px;
-}
 .form-half {
-  flex: 1; /* Take up half of the available space */
-  padding: 20px; /* Add some padding for better appearance */
+  flex: 1;
+  padding: 20px;
   box-sizing: border-box;
   margin-top: 6rem;
   margin-left: 6rem;
   text-align: left;
-  /* Include padding in the total width */
+}
+
+.form-button {
+  width: 550px;
+  height: 50px;
+  background: var(--theme-color);
+  color: #eee;
+  border-radius: 3px;
+  margin-top: 2rem;
 }
 
 .login-button {
@@ -89,4 +71,69 @@
 
 .no-account a {
   text-decoration: none;
+}
+.img-p {
+  text-align: center;
+  font-size: 23px;
+  font-weight: 400;
+}
+.logintext {
+  font-size: 25px;
+  padding-bottom: 3rem;
+}
+.form-content {
+  width: 550px;
+  height: 50px;
+  margin-bottom: 2rem;
+  border: solid 1px rgb(180, 180, 180);
+  border-radius: 5px;
+  background-color: white;
+  outline: none;
+  padding-left: 15px;
+}
+
+/* Media query for tablet screens */
+@media screen and (max-width: 768px) {
+  .login-page {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+  }
+
+  .image-half,
+  .form-half {
+    width: 100%; /* Full width for smaller screens */
+    margin: 0; /* Remove margin for smaller screens */
+  }
+
+  .image-half img {
+    width: 100%; /* Make the image fill the container width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0; /* Remove margin for smaller screens */
+  }
+
+  .form-half {
+    padding: 20px;
+    margin-top: 2rem;
+    margin-left: 0; /* Remove margin for smaller screens */
+  }
+
+  .form-button {
+    width: 100%; /* Full width for smaller screens */
+  }
+}
+
+/* Media query for mobile screens */
+@media screen and (max-width: 480px) {
+  .form-options {
+    flex-direction: column; /* Stack options vertically on smaller screens */
+  }
+
+  .form-options a {
+    margin-left: 0; /* Reset margin for smaller screens */
+    margin-top: 1rem; /* Add space between options on smaller screens */
+  }
+
+  .no-account {
+    margin-left: 0; /* Reset margin for smaller screens */
+    padding-top: 1rem; /* Add space between text and options on smaller screens */
+  }
 }
