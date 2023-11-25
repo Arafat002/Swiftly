@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import "./Register.css";
-const AccountInfo = ({ onPrev, setCurrentLocation, addOtherDetails }) => {
+const AccountInfo = ({ onPrev2, setCurrentLocation, addOtherDetails }) => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
