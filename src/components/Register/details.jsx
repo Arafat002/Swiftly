@@ -1,14 +1,15 @@
 // src/components/RegistrationPage/AccountInfo.js
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 import "./Register.css";
-const AccountInfo = ({ onPrev }) => {
+const AccountInfo = ({ onPrev2, setCurrentLocation, addOtherDetails }) => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     email: "",
     password: "",
-    confirmPassword: "",
   });
 
   const handleChange = (event) => {
@@ -23,21 +24,42 @@ const AccountInfo = ({ onPrev }) => {
     event.preventDefault();
     console.log("Form data submitted:", formData);
   };
+  useEffect(() => {
+    setCurrentLocation(2);
+  });
 
+  useEffect(() => {
+    addOtherDetails({ ...formData });
+  }, [formData]);
+
+  console.log(formData);
   return (
     <div className="details">
       <h2 className="details-header">Almost There!</h2>
       <p className="details-pg">Provide us with your accurate details</p>
       <form className="details-form" onSubmit={handleSubmit}>
-        <label htmlFor="fulltName">Full Name</label>
+        <label htmlFor="fulltName">First Name</label>
         <br />
         <input
           className="form-input"
           placeholder="enter here"
           type="text"
           id="fullName"
-          name="fullName"
-          value={formData.fullName}
+          name="firstName"
+          value={formData.firstName}
+          onChange={handleChange}
+          required
+        />
+        <br />
+        <label htmlFor="lastName">Last Name</label>
+        <br />
+        <input
+          className="form-input"
+          placeholder="enter here"
+          type="text"
+          id="lastName"
+          name="lastName"
+          value={formData.lastName}
           onChange={handleChange}
           required
         />
@@ -128,11 +150,15 @@ const AccountInfo = ({ onPrev }) => {
         </div>
 
         <button className="create-btn" type="submit">
-          Create Account
+          <Anchor to={"../otp-verification"}>Create Account</Anchor>
         </button>
       </form>
     </div>
   );
 };
+
+const Anchor = styled(Link)`
+  color: white;
+`;
 
 export default AccountInfo;

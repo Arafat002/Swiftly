@@ -1,21 +1,33 @@
 // src/components/RegistrationPage/PersonalInfo.js
 import React from "react";
-import { useState } from "react";
-import LogoSvg from "../../assets/swiftly.svg";
+import { useState, useEffect } from "react";
+import styled from "styled-components";
+import LogoSvg from "../../assets/logo.svg";
+// import LogoSvg from "../../assets/swiftly.svg";
 import "./Register.css";
 import { Link } from "react-router-dom";
 
-const CountryInfo = ({ onNext }) => {
+const CountryInfo = ({ onNext, setCurrentLocation, addCountry }) => {
   const [selectedCountry, setSelectedCountry] = useState("");
 
   const handleCountryChange = (event) => {
     setSelectedCountry(event.target.value);
+    console.log(selectedCountry);
   };
   const [selectedAccountType, setSelectedAccountType] = useState("");
 
   const handleAccountTypeChange = (event) => {
     setSelectedAccountType(event.target.value);
+    console.log(selectedAccountType);
   };
+  useEffect(() => {
+    setCurrentLocation(1);
+  }, []);
+
+  useEffect(() => {
+    addCountry(selectedCountry, selectedAccountType);
+  }, [selectedCountry, selectedAccountType]);
+
   return (
     <div>
       <img className="Logo" src={LogoSvg} alt="" />
@@ -60,7 +72,9 @@ const CountryInfo = ({ onNext }) => {
             </div>
           </div>
         </div>
-        <button className="continue-btn">Continue</button>
+        <button className="continue-btn">
+          <Anchor to={"../user-details"}>Continue</Anchor>
+        </button>
         <p className="acc-pg">
           Already have an account? <Link to="/login">Login here</Link>
         </p>
@@ -69,4 +83,7 @@ const CountryInfo = ({ onNext }) => {
   );
 };
 
+const Anchor = styled(Link)`
+  color: white;
+`;
 export default CountryInfo;
