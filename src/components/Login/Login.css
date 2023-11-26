@@ -7,18 +7,19 @@
 
 .image-half {
   flex: 1;
-  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
   background: #e3def7;
   width: 550px;
 }
 
 .image-half img {
-  width: 372px;
+  width: 330px;
   height: 420px;
-  margin-left: 6rem;
-  margin-top: 6rem;
-  margin-bottom: 2rem;
-  object-fit: cover;
+  /* object-fit: cover; */
 }
 
 .form-half {
@@ -74,8 +75,8 @@
 }
 .img-p {
   text-align: center;
-  font-size: 23px;
-  font-weight: 400;
+  font-size: 15px;
+  font-weight: 700;
 }
 .logintext {
   font-size: 25px;

@@ -1,3 +1,16 @@
+@font-face {
+  font-family: "Montsarrat-Regular";
+  src: url(./assets/fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: "Montsarrat-SemiBold";
+  src: url(./assets/fonts/Montserrat-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Montsarrat-Medium";
+  src: url(./assets/fonts/Montserrat-Medium.ttf);
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -12,6 +25,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  font-family: "Montsarrat-Regular";
   --theme-color: #330ba6;
   --hovered-color: #646cff;
 }
