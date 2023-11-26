@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import "./App.css";
 import Root from "./Root";
+import "./styles/global.css";
 
 function App() {
   ReactDOM.render(

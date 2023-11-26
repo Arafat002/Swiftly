@@ -3,10 +3,13 @@ import { Route, Routes } from "react-router-dom";
 import Login from "./components/Login/Login"; // Import your Login component
 import Register from "./components/Register/Register";
 import Dashboard from "./components/Dashboard/dashboard";
-
+import LandingPage from "./components/Landing";
 function Root() {
   return (
     <div>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+      </Routes>
       <Routes>
         <Route path="/login" element={<Login />} />
       </Routes>

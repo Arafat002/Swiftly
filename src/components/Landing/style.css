@@ -1,0 +1,58 @@
+.landing-page {
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.nav-item {
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.features {
+  background-color: #eee;
+  padding: 2rem;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+}
+
+.feature-item {
+  margin-bottom: 0.5rem;
+}
+
+.call-to-action {
+  background-color: #007bff;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+
+.cta-button {
+  background-color: #fff;
+  color: #007bff;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
