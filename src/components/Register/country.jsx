@@ -39,7 +39,7 @@ const CountryInfo = ({ onNext, setCurrentLocation, addCountry }) => {
           select your country and click on business account to continue.
         </p>
         <div className="country-select">
-          <div>
+          <div className="input-holder">
             <label htmlFor="country">Country</label>
             <br />
             <select
@@ -55,7 +55,7 @@ const CountryInfo = ({ onNext, setCurrentLocation, addCountry }) => {
             </select>
           </div>
           <br />
-          <div>
+          <div className="input-holder">
             <div>Select account</div>
 
             <div className="acc-type">

@@ -8,62 +8,80 @@
 
 .Logo {
   margin-right: 700px;
+  position: absolute;
 }
 .country-container {
-  width: 500px;
-  text-align: center;
-  margin-left: 30rem;
-  margin-bottom: 2rem;
-  margin-top: 5rem;
+  width: 560px;
+  margin: 0px auto;
 }
 .country-header {
-  margin-top: -80px;
   font-size: 25px;
-  margin-left: 2px;
+  width: 100%;
+  margin: 0px;
 }
 
 .country-pg {
+  margin: 0px;
   margin-top: 1.5rem;
-  font-size: 19px;
-  padding-left: 1.5rem;
 }
-
+.input-holder {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+}
 .country-select {
-  margin-top: 1.5rem;
+  margin-top: 30px;
   text-align: left;
-  margin-left: 1.75rem;
 }
 .country-label {
-  margin-top: 1.5rem;
-  width: 500px;
+  margin-top: 10px;
+  width: 100%;
   height: 50px;
-  padding-left: 8px;
-  padding-right: 2px;
+  border: solid 1px rgb(180, 180, 180);
+  border-radius: 5px;
   background-color: white;
+  outline: none;
+  padding-left: 15px;
+  font-family: "Montsarrat-Regular";
 }
 
 .account-type {
-  margin-top: 2.5rem;
+  width: 20px;
 }
 
 .continue-btn {
+  margin: 0px;
   color: #eee;
   border-radius: 2px;
-  margin-top: 2rem;
-  margin-left: 2rem;
-  width: 500px;
+  margin-top: 50px;
+  width: 100%;
   height: 50px;
   background: #330ba6;
+  border-radius: 5px;
+  font-family: "Montsarrat-SemiBold";
 }
 .account-type {
   border: 2px solid black;
 }
 .acc-pg {
-  margin-bottom: -30px;
+  margin-top: 20px;
+  text-align: center;
+  font-family: "Montsarrat-SemiBold";
 }
 .acc-pg a {
   text-decoration: none;
   color: #330ba6;
+}
+.acc-type {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 20px;
+  gap: 10px;
+  height: 50px;
+  border: solid 1px rgb(180, 180, 180);
+  align-items: center;
+  border-radius: 5px;
 }
 
 /*Accountinfo styles*/
