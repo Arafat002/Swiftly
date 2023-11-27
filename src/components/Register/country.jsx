@@ -59,7 +59,9 @@ const CountryInfo = ({ onNext, setCurrentLocation, addCountry }) => {
             <div>Select account</div>
 
             <div className="acc-type">
-              <label htmlFor="business">Business Account</label>
+              <label className="business-label" htmlFor="business">
+                Business Account
+              </label>
               <input
                 className="account-type"
                 type="radio"

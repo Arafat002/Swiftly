@@ -43,7 +43,8 @@
 }
 
 .account-type {
-  margin-top: 2.5rem;
+  background: white;
+  margin-right: 10rem;
 }
 
 .continue-btn {
@@ -55,12 +56,12 @@
   height: 50px;
   background: #330ba6;
 }
-.account-type {
-  border: 2px solid black;
+.acc-type {
+  border: 2px solid #330ba6;
+  width: 500px;
+  height: 70px;
 }
-.acc-pg {
-  margin-bottom: -30px;
-}
+
 .acc-pg a {
   text-decoration: none;
   color: #330ba6;
@@ -79,7 +80,7 @@
 }
 
 .details-pg {
-  margin-top: 1rem;
+  margin-top: 2.5rem;
   font-size: 19px;
 }
 
