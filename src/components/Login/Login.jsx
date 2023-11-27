@@ -47,38 +47,31 @@ const Login = () => {
         <p className="img-p">Simplifying business payments efficiently</p>
       </div>
       <div className="form-half">
-        <h2 className="logintext">Login</h2>
+        <h2 className="logintext">LOGIN</h2>
         <form>
-          <label className="form-label">
-            Email Address
-            <br />
-            <br />
-            <input
-              className="form-content"
-              placeholder="example@gmail.com"
-              type="text"
-              required
-              value={usermail}
-              onChange={(e) => setUsermail(e.target.value)}
-            />
-          </label>
+          <label className="form-label">Email Address</label>
           <br />
-          <label className="form-label">
-            Password
-            <br />
-            <br />
-            <input
-              className="form-content"
-              placeholder="enter password"
-              type="password"
-              required
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </label>
-
+          <input
+            className="form-content"
+            placeholder="example@gmail.com"
+            type="text"
+            required
+            value={usermail}
+            onChange={(e) => setUsermail(e.target.value)}
+          />
+          <br />
+          <label className="form-label">Password</label>
+          <br />
+          <input
+            className="form-content"
+            placeholder="enter password"
+            type="password"
+            required
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
           <div className="form-options">
-            <div>
+            <div className="check-box">
               <input type="checkbox" id="remindMe" />
               <label className="remindme-label" htmlFor="remindMe">
                 Remind me

@@ -7,29 +7,38 @@
 
 .image-half {
   flex: 1;
-  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
   background: #e3def7;
   width: 550px;
 }
 
 .image-half img {
-  width: 372px;
+  width: 330px;
   height: 420px;
-  margin-left: 6rem;
-  margin-top: 6rem;
-  margin-bottom: 2rem;
-  object-fit: cover;
+  /* object-fit: cover; */
+}
+.form-label {
+  font-family: "Montsarrat-SemiBold";
+  margin-bottom: 3000rem;
 }
 
 .form-half {
   flex: 1;
   padding: 20px;
   box-sizing: border-box;
-  margin-top: 6rem;
-  margin-left: 6rem;
   text-align: left;
+  width: 550px;
+  height: fit-content;
+  margin: auto;
 }
-
+form {
+  position: relative;
+  width: 100%;
+}
 .form-button {
   width: 550px;
   height: 50px;
@@ -40,12 +49,15 @@
 }
 
 .login-button {
-  width: 550px;
   height: 50px;
   background: var(--theme-color);
   color: #eee;
   border-radius: 3px;
   margin-top: 2rem;
+  width: 100%;
+}
+#remindMe {
+  width: 20px;
 }
 .remindme-label {
   padding-left: 8px;
@@ -53,20 +65,31 @@
 .form-options {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 .form-options a {
-  margin-left: 7.5rem;
   text-decoration: none;
-  color: black; /* Push "Forgot Password?" to the right */
+  color: black;
 }
-
 .form-options div {
-  flex: 1; /* Make each div take equal width */
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.form-options div.check-box {
+  width: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
 }
 
 .no-account {
-  margin-left: 8rem;
-  padding-top: 1rem;
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+  font-family: "Montsarrat-SemiBold";
 }
 
 .no-account a {
@@ -74,22 +97,25 @@
 }
 .img-p {
   text-align: center;
-  font-size: 23px;
-  font-weight: 400;
+  font-size: 15px;
+  font-weight: 700;
 }
 .logintext {
+  margin: 0px;
   font-size: 25px;
   padding-bottom: 3rem;
+  font-family: "Montsarrat-SemiBold";
 }
 .form-content {
-  width: 550px;
   height: 50px;
-  margin-bottom: 2rem;
+  margin-bottom: 20px;
   border: solid 1px rgb(180, 180, 180);
   border-radius: 5px;
   background-color: white;
   outline: none;
   padding-left: 15px;
+  width: 100%;
+  margin-top: 10px;
 }
 
 /* Media query for tablet screens */

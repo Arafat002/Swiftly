@@ -24,8 +24,8 @@ const Root = styled.div`
   }
 `;
 const Holder = styled.div`
-  width: 600px;
-  height: 10px;
+  width: 500px;
+  height: 4px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -33,7 +33,7 @@ const Holder = styled.div`
 `;
 const Box = styled.div`
   position: relative;
-  height: 5px;
+  height: inherit;
   width: 33%;
   background-color: #ececec;
 `;

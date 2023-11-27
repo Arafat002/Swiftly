@@ -1,58 +1,74 @@
-.landing-page {
-  font-family: Arial, sans-serif;
+.menu {
+  float: right;
+  margin-right: 15rem;
+  padding: 1em;
+}
+.navbar {
+  margin-top: 3rem;
+}
+.menu a {
+  padding-bottom: 2rem;
+  padding-right: 1.5em;
+  font-family: oswald;
+  color: #330ba6;
+  text-decoration: none;
+  font-size: 23px;
+}
+button {
+  margin-left: 5rem;
+  background-color: #330ba6;
+}
+.button-a {
+  margin-left: 10rem;
+  background-color: white;
+  border: 1px solid #330ba6;
+}
+.button-b {
+  background-color: #330ba6;
+  color: #eee;
+}
+.button-c {
+  margin-top: 5rem;
+  background-color: #330ba6;
+  color: #eee;
+}
+.button-d {
+  margin-top: 5rem;
+  background-color: white;
+  border: 1px solid #330ba6;
+}
+span {
+  color: #330ba6;
+}
+.discover-p {
+  margin-top: 1rem;
+  margin-left: 5rem;
+}
+h1 {
+  margin-top: 3rem;
+  margin-left: 5rem;
+}
+li {
+  font-size: 18px;
+  font-weight: bold;
+}
+h3 {
+  margin-top: 3rem;
+  margin-left: 5rem;
+}
+.cancel-p {
+  margin-top: 0.5rem;
+  color: gray;
+  margin-left: 5rem;
+}
+.email {
+  background-color: white;
+  margin-left: 5rem;
+  margin-top: 1rem;
+  border-radius: 0px;
+  border: 1px solid gray;
 }
 
-.header {
-  background-color: #333;
-  color: #fff;
-  padding: 1rem;
-}
-
-.nav-list {
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-  padding: 0;
-}
-
-.nav-item {
-  cursor: pointer;
-  padding: 0.5rem;
-}
-
-.features {
-  background-color: #eee;
-  padding: 2rem;
-}
-
-.feature-list {
-  list-style: none;
-  padding: 0;
-}
-
-.feature-item {
-  margin-bottom: 0.5rem;
-}
-
-.call-to-action {
-  background-color: #007bff;
-  color: #fff;
-  padding: 2rem;
-  text-align: center;
-}
-
-.cta-button {
-  background-color: #fff;
-  color: #007bff;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  border: none;
-  cursor: pointer;
-}
-
-.footer {
-  background-color: #333;
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
+input::placeholder {
+  padding-left: 10px;
 }

@@ -1,21 +1,60 @@
 import React from "react";
-import Logo from "../../assets/Logo.svg";
+import Logo from "../../assets/swiftly.svg";
 import Login from "../Login/Login";
+import "./style.css";
+import LandingPicture from "../../assets/product-logo.png";
 import RegistrationPage from "../Register/Register";
 
 const LandingPage = () => {
   return (
-    <div>
-      <img src={Logo} alt="" />
-      <ul>
-        <li>Home</li>
-        <li>Pricing</li>
-        <li>About Us</li>
-        <li>Contact</li>
-      </ul>
+    <div className="page">
+      <div className="navbar">
+        <img src={Logo} alt="" />
+        <div class="menu">
+          <a href="#Home">Home</a>
+          <a href="#Aboutus">Pricing</a>
+          <a href="#">About</a>
+          <a href="#contactus">Contact</a>
+          <button className="button-a" onClick={<Login />}>
+            Login
+          </button>
+          <button className="button-b" onClick={<RegistrationPage />}>
+            Sign up
+          </button>
+        </div>
+      </div>
       <div>
-        <button onClick={<Login />}>Login</button>
-        <button onClick={<RegistrationPage />}>Sign up</button>
+        <h1>
+          Simplifying <span>Small Business</span>
+          <br />
+          Payments
+        </h1>
+        <p className="discover-p">
+          Discover the simplest way to manage your personal business finance
+        </p>
+        <div>
+          <ul>
+            <li>
+              <span className="checkmark">&#10003;</span> Track unpaid invoices
+            </li>
+            <li>
+              <span className="checkmark">&#10003;</span> Manage payments
+            </li>
+            <li>
+              <span className="checkmark">&#10003;</span> Receive Real-time
+              alerts
+            </li>
+          </ul>
+          <div>
+            <button className="button-c">Download App</button>
+            <button className="button-d">Visit website</button>
+          </div>
+          <div>
+            <h3>We would love to keep up with you!</h3>
+            <p className="cancel-p">Feel free to cancel anytime</p>
+            <input className="email" type="email" placeholder="Email address" />
+          </div>
+        </div>
       </div>
     </div>
   );
