@@ -34,14 +34,14 @@ const AccountInfo = ({ onPrev2, setCurrentLocation, addOtherDetails }) => {
 
   console.log(formData);
   return (
-    <div className="details">
-      <h2 className="details-header">Almost There!</h2>
-      <p className="details-pg">Provide us with your accurate details</p>
+    <div className="country-container">
+      <h2 className="country-header">Almost There!</h2>
+      <p className="country-pg">Provide us with your accurate details</p>
       <form className="details-form" onSubmit={handleSubmit}>
         <label htmlFor="fulltName">First Name</label>
         <br />
         <input
-          className="form-input"
+          className="country-label"
           placeholder="enter here"
           type="text"
           id="fullName"
@@ -54,7 +54,7 @@ const AccountInfo = ({ onPrev2, setCurrentLocation, addOtherDetails }) => {
         <label htmlFor="lastName">Last Name</label>
         <br />
         <input
-          className="form-input"
+          className="country-label"
           placeholder="enter here"
           type="text"
           id="lastName"
@@ -67,7 +67,7 @@ const AccountInfo = ({ onPrev2, setCurrentLocation, addOtherDetails }) => {
         <label htmlFor="email">Email address</label>
         <br />
         <input
-          className="form-input"
+          className="country-label"
           placeholder="example@gmail.com"
           type="email"
           id="email"
@@ -78,7 +78,7 @@ const AccountInfo = ({ onPrev2, setCurrentLocation, addOtherDetails }) => {
         />
         <br />
         <br />
-        <div>
+        <div className="select-container">
           <label htmlFor="country">Business Registration Type</label>
           <br />
           <select id="reg-type" className="bus-select">
@@ -87,7 +87,7 @@ const AccountInfo = ({ onPrev2, setCurrentLocation, addOtherDetails }) => {
           </select>
         </div>
         <br />
-        <div>
+        <div className="select-container">
           <label htmlFor="country">
             Is your business incorporated with the corporate affairs
             commission(CAC)
@@ -102,7 +102,7 @@ const AccountInfo = ({ onPrev2, setCurrentLocation, addOtherDetails }) => {
         <label htmlFor="password">CreatePassword</label>
         <br />
         <input
-          className="form-input"
+          className="country-label"
           placeholder="enter password"
           type="password"
           id="password"
@@ -115,7 +115,7 @@ const AccountInfo = ({ onPrev2, setCurrentLocation, addOtherDetails }) => {
         <label htmlFor="confirmPassword">Confirm Password</label>
         <br />
         <input
-          className="form-input"
+          className="country-label"
           placeholder="enter password"
           type="password"
           id="confirmPassword"
@@ -125,28 +125,36 @@ const AccountInfo = ({ onPrev2, setCurrentLocation, addOtherDetails }) => {
           required
         />
         <div>
-          <input
-            type="checkbox"
-            id="agreementChecked"
-            name="agreementChecked"
-            required
-          />
-          <label className="details-agree" htmlFor="agreementChecked">
-            I acknowledge that i have read, understood, and agree to be bound by
-            swiftly’s <a href="">Terms and Conditions and Privacy Notice.</a>
-          </label>
+          <div className="details-input-holder">
+            <input
+              type="checkbox"
+              id="agreementChecked"
+              name="agreementChecked"
+              className="checkbox-type"
+              required
+            />
+            <label className="details-agree" htmlFor="agreementChecked">
+              I acknowledge that i have read, understood, and agree to be bound
+              by swiftly’s{" "}
+              <a href="">Terms and Conditions and Privacy Notice.</a>
+            </label>
+          </div>
+
           <br />
           <br />
-          <input
-            type="checkbox"
-            id="agreementChecked"
-            name="agreementChecked"
-            required
-          />
-          <label className="details-agree" htmlFor="agreementChecked">
-            Tick the box if you want to receive news, interesting updates and
-            offers from swiftly.
-          </label>
+          <div className="details-input-holder">
+            <input
+              type="checkbox"
+              id="agreementChecked"
+              name="agreementChecked"
+              className="checkbox-type"
+              required
+            />
+            <label className="details-agree" htmlFor="agreementChecked">
+              Tick the box if you want to receive news, interesting updates and
+              offers from swiftly.
+            </label>
+          </div>
         </div>
 
         <button className="create-btn" type="submit">

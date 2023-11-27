@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 
 const Verification = ({ setCurrentLocation }) => {
-  const [otp, setOtp] = useState(["", "", "", "", ""]); // Array to store OTP digits
+  const [otp, setOtp] = useState(["", "", "", "", "", ""]); // Array to store OTP digits
   const inputRefs = useRef([
     React.createRef(),
     React.createRef(),
@@ -27,14 +27,14 @@ const Verification = ({ setCurrentLocation }) => {
     setCurrentLocation(3);
   });
   return (
-    <div className="verify-container">
-      <h2 className="verify-header">We just sent you an email </h2>
-      <p className="verify-pg">
+    <div className="country-container">
+      <h2 className="country-header">We just sent you an email </h2>
+      <p className="country-pg">
         Kindly enter the security code we just sent to techtitans@gmail.com in
         order to verify your email.
       </p>
-      <h2 className="verify-header-2">Verification Code </h2>
-      <div>
+      <h2 className="country-header-2">Verification Code </h2>
+      <div className="verify-input-holder">
         {otp.map((digit, index) => (
           <input
             className="verify-input"
@@ -48,8 +48,8 @@ const Verification = ({ setCurrentLocation }) => {
           />
         ))}
       </div>
-      <button className="verify-btn">Verify Email</button>
-      <p className="pg-ver">
+      <button className="continue-btn">Verify Email</button>
+      <p className="acc-pg">
         Didn’t receive OTP?<a href="">Resend OTP</a>{" "}
       </p>
     </div>

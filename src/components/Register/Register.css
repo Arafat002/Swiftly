@@ -19,15 +19,30 @@
   width: 100%;
   margin: 0px;
 }
+.country-header-2 {
+  font-size: 25px;
+  width: 100%;
+  margin: 0px;
+  margin-top: 40px;
+}
 
 .country-pg {
   margin: 0px;
-  margin-top: 1.5rem;
+  margin-top: 10px;
 }
 .input-holder {
   margin: 0px;
   padding: 0px;
   width: 100%;
+}
+.details-input-holder {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+}
+.checkbox-type {
+  width: 20px;
 }
 .country-select {
   margin-top: 30px;
@@ -154,6 +169,10 @@
   padding-left: 15px;
   border-radius: 5px;
   background: white;
+  outline: none;
+  font-size: 22px;
+  color: rgb(180, 180, 180);
+  border: solid 2px rgb(180, 180, 180);
 }
 
 .verify-container {
@@ -196,4 +215,31 @@
 .pg-ver a {
   text-decoration: none;
   color: #330ba6;
+}
+
+.details-form .country-label {
+  margin-bottom: 20px;
+}
+.details-form .select-container {
+  width: 100%;
+  margin: 0px;
+}
+.details-form .select-container select {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 20px;
+  gap: 10px;
+  height: 50px;
+  border: solid 1px rgb(180, 180, 180);
+  align-items: center;
+  border-radius: 5px;
+  font-family: "Montsarrat-Medium";
+  width: 100%;
+  color: rgb(143, 143, 143);
+}
+.verify-input-holder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
