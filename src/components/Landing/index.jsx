@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "../../assets/swiftly.svg";
 import Login from "../Login/Login";
 import "./style.css";
+import { Link } from "react-router-dom";
 import LandingPicture from "../../assets/product-logo.png";
 import RegistrationPage from "../Register/Register";
 
@@ -15,11 +16,11 @@ const LandingPage = () => {
           <a href="#Aboutus">Pricing</a>
           <a href="#">About</a>
           <a href="#contactus">Contact</a>
-          <button className="button-a" onClick={<Login />}>
-            Login
+          <button className="button-a">
+            <Link to={"/login"}>Login</Link>
           </button>
-          <button className="button-b" onClick={<RegistrationPage />}>
-            Sign up
+          <button className="button-b">
+            <Link to={"/register"}>Sign up</Link>
           </button>
         </div>
       </div>
