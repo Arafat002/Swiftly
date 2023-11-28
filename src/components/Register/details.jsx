@@ -20,6 +20,10 @@ const AccountInfo = ({ onPrev2, setCurrentLocation, addOtherDetails }) => {
     });
   };
 
+  useEffect(() => {
+    addOtherDetails({ ...formData });
+  }, [formData]);
+
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("Form data submitted:", formData);
@@ -27,10 +31,6 @@ const AccountInfo = ({ onPrev2, setCurrentLocation, addOtherDetails }) => {
   useEffect(() => {
     setCurrentLocation(2);
   });
-
-  useEffect(() => {
-    addOtherDetails({ ...formData });
-  }, [formData]);
 
   console.log(formData);
   return (

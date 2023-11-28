@@ -11,9 +11,9 @@ const RegistrationPage = () => {
   const [currentLocation, setCurrentLocation] = useState(0);
 
   const [registerationDetails, setRegisterationDetails] = useState({
+    firstName: "",
     country: "",
     businessType: "",
-    firstName: "",
     lastName: "",
     email: "",
     businessRegType: "",
@@ -26,7 +26,7 @@ const RegistrationPage = () => {
   const addCountry = (country, businessType) => {
     setRegisterationDetails({ ...registerationDetails, country, businessType });
   };
-  const addOtherDetails = (firstName, lastName, email, password) => {
+  const addOtherDetails = ({ firstName, lastName, email, password }) => {
     setRegisterationDetails({
       ...registerationDetails,
       firstName,

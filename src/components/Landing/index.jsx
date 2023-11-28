@@ -11,7 +11,7 @@ const LandingPage = () => {
     <div className="page">
       <div className="navbar">
         <img src={Logo} alt="" />
-        <div class="menu">
+        <div className="menu">
           <a href="#Home">Home</a>
           <a href="#Aboutus">Pricing</a>
           <a href="#">About</a>
@@ -20,7 +20,7 @@ const LandingPage = () => {
             <Link to={"/login"}>Login</Link>
           </button>
           <button className="button-b">
-            <Link to={"/register"}>Sign up</Link>
+            <Link to={"/register/country"}>Sign up</Link>
           </button>
         </div>
       </div>

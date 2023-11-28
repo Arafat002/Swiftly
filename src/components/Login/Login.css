@@ -49,6 +49,7 @@ form {
 }
 
 .login-button {
+  margin: 0;
   height: 50px;
   background: var(--theme-color);
   color: #eee;
