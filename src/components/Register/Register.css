@@ -153,6 +153,18 @@
   font-size: 18px;
 }
 
+.faded-button {
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  color: #3f3f3f;
+  background-color: #9b9b9b;
+  border: 5px;
+  width: 500px;
+  height: 50px;
+  font-size: 18px;
+  pointer-events: none;
+}
+
 .details-agree {
   padding-left: 8px;
 }

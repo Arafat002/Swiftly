@@ -11,7 +11,7 @@ function Root() {
         <Route path="/" element={<LandingPage />} />
       </Routes>
       <Routes>
-        <Route path="/login" element={<Login />} />
+        <Route path="/login/*" element={<Login />} />
       </Routes>
       <Routes>
         <Route path="/register/*" element={<Register />} />

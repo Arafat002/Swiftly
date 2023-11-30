@@ -12,7 +12,6 @@ const CountryInfo = ({ onNext, setCurrentLocation, addCountry }) => {
 
   const handleCountryChange = (event) => {
     setSelectedCountry(event.target.value);
-    console.log(selectedCountry);
   };
   const [selectedAccountType, setSelectedAccountType] = useState("");
 

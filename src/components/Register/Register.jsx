@@ -16,7 +16,6 @@ const RegistrationPage = () => {
     businessType: "",
     lastName: "",
     email: "",
-    businessRegType: "",
     CAC: "",
     password: "",
   });
@@ -69,7 +68,12 @@ const RegistrationPage = () => {
       <Routes>
         <Route
           path="/otp-verification"
-          element={<Verification setCurrentLocation={setCurrentLocation} />}
+          element={
+            <Verification
+              setCurrentLocation={setCurrentLocation}
+              registerationDetails={registerationDetails}
+            />
+          }
         />
       </Routes>
     </>

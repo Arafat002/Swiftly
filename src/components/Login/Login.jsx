@@ -3,10 +3,11 @@ import React, { useState } from "react";
 import axios from "axios";
 import trackPaymentSvg from "../../assets/trackpayment.svg"; // Adjust the path based on your project structure
 import "./Login.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import ForgotPasswordSupportModal from "../forgot-password-modal";
 const Login = () => {
+  const [error, setError] = useState("");
   const [usermail, setUsermail] = useState("");
   const [password, setPassword] = useState("");
   const [showModal, setShowModal] = useState(false);
@@ -16,6 +17,9 @@ const Login = () => {
   const closeModal = () => {
     setShowModal(false);
   };
+
+  const navigate = useNavigate();
+
   const handleLogin = async () => {
     //
     // Don't forget to install to install axios
@@ -23,17 +27,18 @@ const Login = () => {
     //
 
     try {
-      const responce = await axios.post("http://127.0.0.1:1234/v1/auth/login", {
-        loginMail: usermail,
-        loginPassword: password,
-      });
+      const responce = await axios.post(
+        "https://swiftly.cyclic.app/v1/auth/login",
+        {
+          loginMail: usermail,
+          loginPassword: password,
+        }
+      );
       console.log(responce);
       if (responce.data.status === "success") {
-        // Redirect to dashboard here
-        console.log("Logging in with:", { usermail, password });
+        navigate("/dashboard");
       } else {
-        // Throw error
-        console.log("error");
+        setError(responce.data.message);
       }
     } catch (err) {
       console.log(err);

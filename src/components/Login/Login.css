@@ -13,7 +13,6 @@
   align-items: center;
   gap: 10px;
   background: #e3def7;
-  width: 550px;
 }
 
 .image-half img {
@@ -31,7 +30,8 @@
   padding: 20px;
   box-sizing: border-box;
   text-align: left;
-  width: 550px;
+  width: 200px;
+  max-width: 600px;
   height: fit-content;
   margin: auto;
 }
@@ -40,7 +40,8 @@ form {
   width: 100%;
 }
 .form-button {
-  width: 550px;
+  position: relative;
+  width: 100%;
   height: 50px;
   background: var(--theme-color);
   color: #eee;

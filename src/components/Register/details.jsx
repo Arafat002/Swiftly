@@ -1,16 +1,33 @@
 // src/components/RegistrationPage/AccountInfo.js
-import React from "react";
+import React, { useRef } from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import "./Register.css";
 const AccountInfo = ({ onPrev2, setCurrentLocation, addOtherDetails }) => {
+  const buttonRef = useRef(null);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     email: "",
     password: "",
+    CAC: "",
   });
+
+  const checkPassword = () => {};
+
+  // useEffect(() => {
+  //   if (
+  //     formData.password !== formData.confirmPassword ||
+  //     formData.confirmPassword === ""
+  //   ) {
+  //     if (buttonRef.current) {
+  //       buttonRef.current. = "none";
+  //     }
+  //   } else {
+  //     return true;
+  //   }
+  // });
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -99,7 +116,7 @@ const AccountInfo = ({ onPrev2, setCurrentLocation, addOtherDetails }) => {
           </select>
         </div>
         <br />
-        <label htmlFor="password">CreatePassword</label>
+        <label htmlFor="password">Create Password</label>
         <br />
         <input
           className="country-label"
@@ -157,7 +174,11 @@ const AccountInfo = ({ onPrev2, setCurrentLocation, addOtherDetails }) => {
           </div>
         </div>
 
-        <button className="create-btn" type="submit">
+        <button
+          className={checkPassword ? "create-btn" : "faded-button"}
+          type="submit"
+          ref={buttonRef}
+        >
           <Anchor to={"../otp-verification"}>Create Account</Anchor>
         </button>
       </form>
